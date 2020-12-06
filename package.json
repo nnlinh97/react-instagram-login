@@ -1,26 +1,25 @@
 {
   "name": "react-instagram-login",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "An Instagram Login Component for React",
   "main": "dist/instagram-login.js",
   "scripts": {
-    "start": "set NODE_ENV=development&& webpack-dev-server --config webpack/webpack.config.dev.js",
+    "start": "set NODE_ENV=development&& webpack serve --config webpack/webpack.config.dev.js",
     "dev": "npm run start",
-    "bundle": "rm -rf dist; set NODE_ENV=production&& webpack -p --config webpack/webpack.config.prod.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "bundle": "set NODE_ENV=production&& webpack --config webpack/webpack.config.prod.js",
+    "test": "mocha --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "clean": "rm -rf node_modules dist; rm package-lock.json"
   },
   "pre-commit": [
-    "test",
     "lint",
     "bundle"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anthonyjgrove/react-instagram-login.git"
+    "url": "git+https://github.com/Amraneze/react-instagram-login.git"
   },
   "keywords": [
     "react",
@@ -30,18 +29,20 @@
     "instagram-oAuth2",
     "instagram-oAuth"
   ],
-  "author": "Anthony Grove <anthony@th3legend.com>",
+  "author": "Amrane Ait Zeouay <a.zeouayamran@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anthonyjgrove/react-instagram-login/issues"
+    "url": "https://github.com/Amraneze/react-instagram-login/issues"
   },
-  "homepage": "https://github.com/anthonyjgrove/react-instagram-login",
+  "homepage": "https://github.com/Amraneze/react-instagram-login",
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-transform-destructuring": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
     "autoprefixer": "7.1.4",
-    "babel": "6.23.0",
-    "babel-core": "6.26.0",
     "babel-eslint": "8.0.1",
-    "babel-loader": "7.1.2",
+    "babel-loader": "^8.2.2",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-inline-elements": "6.22.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.9",
@@ -50,26 +51,28 @@
     "chai": "4.1.2",
     "chai-jquery": "2.0.0",
     "eslint-config-ag": "1.0.4",
+    "gulp-babel": "^8.0.0",
     "jquery": "3.4.1",
-    "jsdom": "9.2.0",
-    "mocha": "3.5.3",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.2.1",
     "pre-commit": "1.2.2",
     "prop-types": "15.6.1",
     "react": "^16.0.0",
     "react-addons-test-utils": "15.1.0",
     "react-dom": "^16.12.0",
     "react-fontawesome": "1.6.1",
-    "uglifyjs-webpack-plugin": "0.4.6",
-    "webpack": "3.6.0",
-    "webpack-dev-server": "2.9.1"
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
     "react": "^16.0.0"
   },
   "babel": {
     "presets": [
-      "es2015",
-      "react"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "directories": {
