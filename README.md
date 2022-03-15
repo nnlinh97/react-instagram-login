@@ -17,7 +17,7 @@ yarn add @nnlinh97/react-instagram-login
 ### With default button
 ```js
 import ReactDOM from 'react-dom';
-import { InstagramLogin } from '@amraneze/react-instagram-login';
+import { InstagramLogin } from '@nnlinh97/react-instagram-login';
 
 const responseInstagram = (response) => {
   console.log(response);
