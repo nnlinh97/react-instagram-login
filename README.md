@@ -6,11 +6,11 @@
 ## Install
 
 ```
-npm install @amraneze/react-instagram-login
+npm install @nnlinh97/react-instagram-login
 ```
 
 ```
-yarn add @amraneze/react-instagram-login
+yarn add @nnlinh97/react-instagram-login
 ```
 
 ## How to use
